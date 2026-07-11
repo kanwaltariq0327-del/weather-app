@@ -19,8 +19,9 @@ async function checkWeather(city) {
   document.querySelector(".wind").innerHTML =
     Math.round(data.wind.speed) + " km/h";
   document.querySelector(".condition").innerHTML = data.weather[0].main;
+  console.log(document.querySelector(".condition").innerHTML = data.weather[0].main);
 
-  if (data.weather[0].main == "Cloudy") {
+  if (data.weather[0].main == "Clouds") {
     cardVideo.src = "./Assets/clouds.mp4";
   } else if (data.weather[0].main == "Clear") {
     cardVideo.src = "./Assets/sunny.mp4";
