@@ -21,7 +21,7 @@ async function checkWeather(city) {
   document.querySelector(".condition").innerHTML = data.weather[0].main;
 
   if (data.weather[0].main == "Cloudy") {
-    cardVideo.src = "./Assets/cloudy.mp4";
+    cardVideo.src = "./Assets/clouds.mp4";
   } else if (data.weather[0].main == "Clear") {
     cardVideo.src = "./Assets/sunny.mp4";
   } else if (data.weather[0].main == "Drizzle") {
