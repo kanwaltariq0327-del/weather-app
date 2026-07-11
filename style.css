@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Miniver&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #222;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 90%;
+    max-width: 370px;
+    background-color: white;
+    color: white;
+    border-radius: 20px;
+    padding: 40px 0 0 0;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+.card video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    aspect-ratio: 1;
+    border-radius: 20px;
+}
+
+.search {
+    width: 100%;
+    padding: 0 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    padding: 8px 25px;
+    height: 40px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+
+.search button:hover {
+    font-size: 24px;
+    background-color: #c5c2c2;
+}
+
+.weather {
+    text-align: left;
+}
+
+.weather h1 {
+    font-size: 150px;
+    font-weight: 400;
+    margin-left: 10px;
+    position: relative;
+    background: linear-gradient(180deg, #fff 35%,  #00000024 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.weather h1 span {
+    font-size: 40px;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    color: white;
+}
+
+.weather h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 20px 0 10px 20px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-radius: 40px 40px 20px 20px;
+}
+
+.col {    
+    box-shadow: 2px 2px 8px #151515;
+    border-radius: 10px;
+    width: calc(100% / 3 - 8px);
+    height: 140px;
+    padding: 20px 4px;
+    display: flex;
+    flex-direction: column ;
+    align-items: start;
+    justify-content: center;
+    text-align: left;
+}
+
+.col img {
+    width: 60px;
+    height: 60px;
+    background-color: #212020c6;
+    border-radius: 50%;
+}
+
+.humidity, .wind {
+    font-size: 20px;
+}
+
+.condition {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.col p:nth-child(2) {
+    font-size: 17px;
+}
+
+/* MEDIA QUERY */
+@media (max-width:450px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+}
